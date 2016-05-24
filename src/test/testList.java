@@ -1,6 +1,6 @@
 package test;
 
-import llist.LinkedList;
+import linkedlist.LinkedList;
 
 public class testList {
 	public static void main(String [] args) {
@@ -16,5 +16,12 @@ public class testList {
 		list.remove(1);
 		list.remove(0);
 		list.print();
+		
+		list.insert(0, "Huy");
+		String temp = list.get(0);
+		System.out.println("The 0th element is "+temp);
+		
+		list.set(0, "Huong");
+		System.out.println("The 0th element is now "+list.get(0));
 	}
 }
