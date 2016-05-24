@@ -1,6 +1,6 @@
 # Data Structures
 
-To review the different data structures, I implemented them from scratch using Java.
+Implementation of different data structures using Java.
 
-Currently implemented:
+##Currently implemented
 - Doubly Linked List
