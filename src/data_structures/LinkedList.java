@@ -158,9 +158,8 @@ public class LinkedList<T> {
 		Node<T> curr = this.head;
 		
 		// The list is empty
-		if(this.isEmpty()) {
-			System.out.print("The list is empty");
-		}
+		if(this.isEmpty()) System.out.print("The list is empty");
+
 		// The list is not empty
 		else {
 			while(curr != null){
