@@ -1,10 +1,13 @@
 package test;
 
-import linkedlist.LinkedList;
+import data_structures.LinkedList;
 
 public class testList {
 	public static void main(String [] args) {
-		LinkedList<String> list = new LinkedList();
+		LinkedList<String> list = new LinkedList<>();
+		
+		System.out.println("The list is initially empty: "+list.isEmpty());
+		
 		list.insert(0, "Huy");
 		list.insert(0, "Huong");
 		list.insert(2, "Lilian");
