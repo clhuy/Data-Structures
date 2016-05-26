@@ -8,8 +8,7 @@ package data_structures;
  */
 
 public class LinkedList<T> {
-	private Node<T> head;
-	private Node<T> tail;
+	private Node<T> head, tail;
 	private int size;
 	
 	
@@ -59,9 +58,7 @@ public class LinkedList<T> {
 	// Insert value val at index pos
 	public void insert(int pos, T val) {
 		// Validate pos
-		if(pos < 0 || pos > size) {
-			return;
-		}
+		if(pos < 0 || pos > size) throw new IndexOutOfBoundsException();
 		
 		Node<T> newNode = new Node<>(val);
 		// Inserting into an empty list
@@ -96,9 +93,7 @@ public class LinkedList<T> {
 	// Remove the node at index pos
 	public void remove(int pos) {
 		// Validate pos
-		if(this.isEmpty() || pos < 0 || pos > size-1) {
-			return;
-		}
+		if(this.isEmpty() || pos < 0 || pos > size-1) throw new IndexOutOfBoundsException();
 		
 		System.out.println("'"+this.get(pos)+"'" + " is removed");
 		
@@ -131,9 +126,8 @@ public class LinkedList<T> {
 	// Overwrites the old value at index pos with value val
 	public void set(int pos, T val) {
 		// Validate pos
-		if(this.isEmpty() || pos < 0 || pos > size-1) {
-			return;
-		}
+		if(this.isEmpty() || pos < 0 || pos > size-1) throw new IndexOutOfBoundsException();
+		
 		this.getNodeAtIndex(pos).val = val;
 		System.out.println("The "+pos+"th element is set to "+val);
 	}
@@ -141,9 +135,8 @@ public class LinkedList<T> {
 	// Return the value at index pos
 	public T get(int pos) {
 		// Validate pos
-		if(this.isEmpty() || pos < 0 || pos > size-1) {
-			return null;
-		}
+		if(this.isEmpty() || pos < 0 || pos > size-1) throw new IndexOutOfBoundsException();
+		
 		return this.getNodeAtIndex(pos).val;
 	}
 	
@@ -156,9 +149,7 @@ public class LinkedList<T> {
 			}
 			return temp;
 		}
-		else {
-			return null;
-		}
+		else throw new IndexOutOfBoundsException();
 	}
 	
 	// Print the list
