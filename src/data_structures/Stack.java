@@ -22,18 +22,18 @@ public class Stack<T> {
 		// Node constructor
 		public Node(E value) {
 			this.value = value;
-			this.next = null;
+			next = null;
 		}
 	}
 	
 	// Constructor
 	public Stack() {
-		this.top = null;
+		top = null;
 	}
 	
 	// Check whether the stack is empty
 	public boolean isEmpty() {
-		return this.top == null;
+		return top == null;
 	}
 	
 	// Push value val onto the top of the stack
@@ -48,9 +48,9 @@ public class Stack<T> {
 	// Remove and return the top value
 	public T pop() {
 		// Handle empty stack
-		if(this.isEmpty()) throw new EmptyStackException();
+		if(isEmpty()) throw new EmptyStackException();
 		
-		T val = this.top.value;
+		T val = top.value;
 		top = top.next;
 		
 		System.out.println("'"+val+"'" + " is popped from the stack");
@@ -61,18 +61,18 @@ public class Stack<T> {
 	// Return the top value 
 	public T peek() {
 		// Handle empty stack
-		if(this.isEmpty()) throw new EmptyStackException();
+		if(isEmpty()) throw new EmptyStackException();
 		
-		return this.top.value;
+		return top.value;
 	}
 	
 	// Print the stack
 	public void print() {
 		System.out.print("The stack: ");
-		Node<T> curr = this.top;
+		Node<T> curr = top;
 		
 		// The stack is empty
-		if(this.isEmpty()) {
+		if(isEmpty()) {
 			System.out.print("The stack is empty");
 		}
 		// The stack is not empty
